@@ -15,19 +15,19 @@ const CTASection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="gradient-primary border-0">
-            <a href="mailto:contact@alronq.com">
+            <a href="connect.alronq@gmail.com">
               <Mail className="mr-2 h-4 w-4" />
               Contact Us
             </a>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="mailto:pilot@alronq.com">
+            <a href="connect.alronq@gmail.com">
               <Users className="mr-2 h-4 w-4" />
               Join the Pilot Program
             </a>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="mailto:partners@alronq.com">
+            <a href="connect.alronq@gmail.com">
               <Handshake className="mr-2 h-4 w-4" />
               Partner with Us
             </a>
