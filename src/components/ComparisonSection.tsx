@@ -39,7 +39,7 @@ const ComparisonSection = () => {
 
         {/* ===== SAME TABLE FOR MOBILE + DESKTOP ===== */}
         <div className="max-w-4xl mx-auto overflow-x-auto">
-          <table className="w-full min-w-[640px] bg-card rounded-xl border border-border overflow-hidden">
+          <table className="w-full min-w-[500px] bg-card rounded-xl border border-border overflow-hidden">
             <thead>
               <tr className="border-b border-border">
                 <th className="p-4 text-left font-semibold">Feature</th>

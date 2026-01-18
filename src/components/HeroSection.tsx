@@ -40,7 +40,7 @@ const HeroSection = () => {
             <Button asChild size="lg" variant="outline">
               <a href="#cta">Join Pilot Program</a>
             </Button>
-            <Button asChild size="lg" variant="ghost">
+            <Button asChild size="lg" variant="outline">
               <a href="#prototype">View Prototype</a>
             </Button>
           </div>
@@ -56,8 +56,8 @@ const HeroSection = () => {
               {/* 🔥 PARTICLES — NOW ACTUALLY VISIBLE */}
               <Particles
                 color="#9fd3ff"
-                particleCount={isMobile ? 10000 : 30000}
-                particleSize={2}
+                particleCount={ 20000}
+                particleSize={5}
                 animate
                 className="absolute inset-0 z-0 pointer-events-none "
               />
@@ -66,13 +66,13 @@ const HeroSection = () => {
               <div className="relative z-10 h-full w-full flex items-center justify-center ">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="p-4 bg-primary/20 rounded-full">
+                    <div className="p-2 bg-primary/20 rounded-full">
                       <Smartphone className="h-8 w-8 text-primary" />
                     </div>
 
                     <ArrowRight className="h-6 w-6 text-muted-foreground" />
 
-                    <div className="p-4 bg-secondary/20 rounded-full">
+                    <div className="p-2 bg-secondary/20 rounded-full">
                       <Monitor className="h-8 w-8 text-secondary" />
                     </div>
                   </div>
