@@ -32,7 +32,14 @@
   </head>
 
   <body>
-    <div id="root"></div>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    </ThemeProvider>
   </body>
 </html>

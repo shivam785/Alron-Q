@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
@@ -14,11 +13,12 @@ import TeamSection from "@/components/TeamSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { FlexNavbar } from "@/components/ui/flexnavbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+  <FlexNavbar/>
       <main>
         <HeroSection />
         <ProblemSection />
