@@ -12,9 +12,9 @@ const ComparisonSection = () => {
   const renderCell = (value: string | boolean) => {
     if (typeof value === "boolean") {
       return value ? (
-        <Check className="h-5 w-5 text-secondary mx-auto" />
+        <Check className="h-5 w-5 text-secondary" />
       ) : (
-        <X className="h-5 w-5 text-destructive mx-auto" />
+        <X className="h-5 w-5 text-destructive" />
       );
     }
     return <span>{value}</span>;
@@ -29,7 +29,8 @@ const ComparisonSection = () => {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto overflow-x-auto">
+        {/* ================= DESKTOP TABLE ================= */}
+        <div className="hidden md:block max-w-4xl mx-auto overflow-x-auto">
           <table className="w-full bg-card rounded-xl border border-border overflow-hidden">
             <thead>
               <tr className="border-b border-border">
@@ -48,17 +49,53 @@ const ComparisonSection = () => {
                   className={index !== comparisonData.length - 1 ? "border-b border-border" : ""}
                 >
                   <td className="p-4 font-medium">{row.feature}</td>
-                  <td className="p-4 text-center text-muted-foreground">{renderCell(row.laptop)}</td>
-                  <td className="p-4 text-center text-muted-foreground">{renderCell(row.tablet)}</td>
-                  <td className="p-4 text-center bg-primary/5 font-medium">{renderCell(row.alronq)}</td>
+                  <td className="p-4 text-center text-muted-foreground">
+                    {renderCell(row.laptop)}
+                  </td>
+                  <td className="p-4 text-center text-muted-foreground">
+                    {renderCell(row.tablet)}
+                  </td>
+                  <td className="p-4 text-center bg-primary/5 font-medium">
+                    {renderCell(row.alronq)}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
+        {/* ================= MOBILE VIEW ================= */}
+        <div className="md:hidden space-y-6">
+          {comparisonData.map((row, index) => (
+            <div
+              key={index}
+              className="bg-card border border-border rounded-xl p-4"
+            >
+              <h3 className="font-semibold mb-4">{row.feature}</h3>
+
+              <div className="grid grid-cols-3 gap-4 text-center text-sm">
+                <div>
+                  <p className="text-muted-foreground mb-1">Laptop</p>
+                  {renderCell(row.laptop)}
+                </div>
+
+                <div>
+                  <p className="text-muted-foreground mb-1">Tablet</p>
+                  {renderCell(row.tablet)}
+                </div>
+
+                <div className="bg-primary/5 rounded-lg py-2">
+                  <p className="gradient-text font-semibold mb-1">Alron Q</p>
+                  {renderCell(row.alronq)}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <p className="text-center mt-8 font-semibold text-lg">
-          We don't replace smartphones — <span className="gradient-text">we transform them.</span>
+          We don't replace smartphones —{" "}
+          <span className="gradient-text">we transform them.</span>
         </p>
       </div>
     </section>
