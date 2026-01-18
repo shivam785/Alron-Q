@@ -51,19 +51,19 @@ const HeroSection = () => {
           <div className="bg-card rounded-2xl border border-border shadow-xl p-8">
 
             {/* Preview box */}
-            <div className="relative aspect-video rounded-xl overflow-hidden">
+            <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
 
               {/* 🔥 PARTICLES — NOW ACTUALLY VISIBLE */}
               <Particles
                 color="#9fd3ff"
-                particleCount={isMobile ? 7000 : 14000}
-                particleSize={1.6}
+                particleCount={isMobile ? 10000 : 30000}
+                particleSize={2}
                 animate
-                className="absolute inset-0 z-0 pointer-events-none"
+                className="absolute inset-0 z-0 pointer-events-none "
               />
 
               {/* Foreground content (semi-transparent) */}
-              <div className="relative z-10 h-full w-full flex items-center justify-center bg-white/60 dark:bg-black/40 backdrop-blur-sm">
+              <div className="relative z-10 h-full w-full flex items-center justify-center ">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="p-4 bg-primary/20 rounded-full">
