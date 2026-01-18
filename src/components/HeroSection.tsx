@@ -48,10 +48,10 @@ const HeroSection = () => {
 
         {/* ================= PRODUCT PREVIEW (FIXED) ================= */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-card rounded-2xl border border-border shadow-xl p-8">
+          <div className="bg-card rounded-2xl border border-border shadow-xl p-8 ">
 
             {/* Preview box */}
-            <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
+            <div className="relative aspect-video rounded-xl overflow-hidden">
 
               {/* 🔥 PARTICLES — NOW ACTUALLY VISIBLE */}
               <Particles
