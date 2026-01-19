@@ -39,18 +39,18 @@ const SolutionSection = () => {
               className="bg-card rounded-xl p-6 border border-border text-center hover:border-primary/50 transition-colors"
             >
               <div className="p-4 gradient-primary rounded-full w-fit mx-auto mb-4">
-                <feature.icon className="h-6 w-6 text-primary-foreground" />
+                <feature.icon className="h-6 w-6 text-primary" />
               </div>
               <p className="font-medium">{feature.text}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 rounded-2xl p-8 max-w-3xl mx-auto border border-border">
+        <div className="bg-secondary/20 rounded-2xl p-8 max-w-3xl mx-auto border border-border">
           <div className="flex flex-wrap justify-center gap-4 text-center">
             {["No expensive hardware", "No distractions", "Just learning"].map((item, index) => (
               <div key={index} className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-secondary" />
+                <Check className="h-5 w-5 text-primary" />
                 <span className="font-semibold">{item}</span>
                 {index < 2 && <span className="hidden sm:inline text-muted-foreground mx-2">•</span>}
               </div>

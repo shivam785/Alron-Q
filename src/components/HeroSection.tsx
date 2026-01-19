@@ -13,7 +13,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-background via-background to-muted">
+    <section className="pt-32 pb-20 px-4 bg-background">
       <div className="container mx-auto text-center">
         {/* ================= TEXT ================= */}
         <div className="max-w-4xl mx-auto">
@@ -72,8 +72,8 @@ const HeroSection = () => {
 
                     <ArrowRight className="h-6 w-6 text-muted-foreground" />
 
-                    <div className="p-2 bg-secondary/20 rounded-full">
-                      <Monitor className="h-8 w-8 text-secondary" />
+                    <div className="p-2 bg-primary/20 rounded-full">
+                      <Monitor className="h-8 w-8 text-primary" />
                     </div>
                   </div>
 

@@ -30,8 +30,8 @@ const ProductOverviewSection = () => {
           {/* Hardware Column */}
           <div className="bg-card rounded-xl p-8 border border-border">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 gradient-primary rounded-lg">
-                <Monitor className="h-6 w-6 text-primary-foreground" />
+              <div className="p-3 bg-secondary gradient-primary rounded-lg">
+                <Monitor className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold">Hardware</h3>
             </div>
@@ -49,14 +49,14 @@ const ProductOverviewSection = () => {
           <div className="bg-card rounded-xl p-8 border border-border">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-secondary rounded-lg">
-                <Settings className="h-6 w-6 text-secondary-foreground" />
+                <Settings className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold">Software (Study App)</h3>
             </div>
             <ul className="space-y-4">
               {softwareFeatures.map((feature, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <feature.icon className="h-5 w-5 text-secondary" />
+                  <feature.icon className="h-5 w-5 text-primary" />
                   <span>{feature.text}</span>
                 </li>
               ))}

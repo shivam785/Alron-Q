@@ -19,7 +19,7 @@ const ComparisonSection = () => {
   const renderCell = (value: string | boolean) => {
     if (typeof value === "boolean") {
       return value ? (
-        <Check className="h-5 w-5 text-secondary mx-auto" />
+        <Check className="h-5 w-5 text-primary mx-auto" />
       ) : (
         <X className="h-5 w-5 text-destructive mx-auto" />
       );
@@ -64,10 +64,10 @@ const ComparisonSection = () => {
                   }
                 >
                   <td className="p-4 font-medium">{row.feature}</td>
-                  <td className="p-4 text-center text-muted-foreground">
+                  <td className="p-4 text-center text-foreground">
                     {renderCell(row.laptop)}
                   </td>
-                  <td className="p-4 text-center text-muted-foreground">
+                  <td className="p-4 text-center text-foreground">
                     {renderCell(row.tablet)}
                   </td>
                   <td className="p-4 text-center bg-primary/5 font-medium">

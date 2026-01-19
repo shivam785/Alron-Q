@@ -40,7 +40,7 @@ const AudienceSection = () => {
               className="bg-card rounded-xl p-6 border border-border text-center hover:shadow-md transition-shadow"
             >
               <div className="p-4 gradient-primary rounded-full w-fit mx-auto mb-4">
-                <audience.icon className="h-6 w-6 text-primary-foreground" />
+                <audience.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-semibold text-lg mb-1">{audience.title}</h3>
               <p className="text-muted-foreground text-sm">{audience.description}</p>

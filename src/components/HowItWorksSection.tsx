@@ -49,13 +49,13 @@ const HowItWorksSection = () => {
               >
                 <div className="flex items-start gap-4">
                   <div className="relative">
-                    <div className="text-4xl font-bold text-primary/20 group-hover:text-primary/30 transition-colors">
+                    <div className="text-4xl font-bold text-primary">
                       {step.number}
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="p-3 gradient-primary rounded-lg w-fit mb-3">
-                      <step.icon className="h-5 w-5 text-primary-foreground" />
+                      <step.icon className="h-5 w-5 text-primary" />
                     </div>
                     <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm">{step.description}</p>

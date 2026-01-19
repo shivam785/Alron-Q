@@ -5,7 +5,7 @@ const CTASection = () => {
   return (
     <section
       id="cta"
-      className="py-20 px-4 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10"
+      className="py-20 px-4 bg-background"
     >
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">

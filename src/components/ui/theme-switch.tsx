@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { useTheme } from "next-themes";
+import { useTheme , type Theme } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 interface ThemeSwitchProps extends React.HTMLAttributes<HTMLDivElement> {
-  modes?: string[];
+  modes?: Theme[];
   icons?: React.ReactNode[];
   showActiveIconOnly?: boolean;
   showInactiveIcons?: "all" | "none" | "next";
@@ -28,7 +28,7 @@ const ThemeSwitch = React.forwardRef<HTMLDivElement, ThemeSwitchProps>(
     const { theme, setTheme } = useTheme();
 
     const currentModeIndex = React.useMemo(() => {
-      const index = modes.indexOf(theme || "");
+      const index = modes.indexOf(theme );
       return index !== -1 ? index : 0;
     }, [theme, modes]);
 

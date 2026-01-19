@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import tailwindcssAnimate from "tailwindcss-animate"
 export default {
   darkMode: ["class"],
   content: [
@@ -81,12 +81,26 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "shake-smooth": {
+          '0%': { transform: 'translateX(0)' },
+          '10%': { transform: 'translateX(-12px)' },
+          '20%': { transform: 'translateX(12px)' },
+          '30%': { transform: 'translateX(-10px)' },
+          '40%': { transform: 'translateX(10px)' },
+          '50%': { transform: 'translateX(-6px)' },
+          '60%': { transform: 'translateX(6px)' },
+          '70%': { transform: 'translateX(-3px)' },
+          '80%': { transform: 'translateX(3px)' },
+          '90%': { transform: 'translateX(-1px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "shake-smooth": "shake-smooth 0.5s ease-in-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

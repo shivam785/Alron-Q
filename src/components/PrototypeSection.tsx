@@ -27,7 +27,7 @@ const PrototypeSection = () => {
               {completedItems.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="p-1 bg-secondary/20 rounded-full">
-                    <Check className="h-4 w-4 text-secondary" />
+                    <Check className="h-4 w-4 text-primary" />
                   </div>
                   <span className="font-medium">{item}</span>
                 </div>

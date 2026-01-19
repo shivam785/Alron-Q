@@ -1,7 +1,7 @@
 const phases = [
   {
     number: "1",
-    title: "Prototype & Testing",
+    title: "Prototype , Testing & Launch",
     status: "current",
   },
   {
@@ -39,30 +39,35 @@ const RoadmapSection = () => {
                   className={`bg-card rounded-xl p-6 border-2 text-center h-full ${
                     phase.status === "current"
                       ? "border-primary shadow-lg"
-                      : "border-border"
+                      : "border-primary shadow-lg"
                   }`}
                 >
                   <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold ${
                       phase.status === "current"
-                        ? "gradient-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground"
+                        ? "bg-muted gradient-primary text-muted-foreground"
+                        : "bg-muted  gradient-primary  text-muted-foreground"
                     }`}
                   >
                     {phase.number}
                   </div>
-                  <h3 className={`font-semibold ${phase.status === "current" ? "" : "text-muted-foreground"}`}>
+                  <h3 className={`font-semibold ${phase.status === "current" ? "" : "text-primary"}`}>
                     {phase.title}
                   </h3>
                   {phase.status === "current" && (
-                    <span className="inline-block mt-3 text-xs font-semibold gradient-primary text-primary-foreground px-3 py-1 rounded-full">
+                    <span className="inline-block mt-3 text-xs font-semibold gradient-primary text-primary px-3 py-1 rounded-full">
                       Current
+                    </span>
+                  )}
+                   {phase.status === "upcoming" && (
+                    <span className="inline-block mt-3 text-xs font-semibold gradient-primary text-primary px-3 py-1 rounded-full">
+                      Upcoming
                     </span>
                   )}
                 </div>
                 {index < phases.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-muted-foreground">
-                    →
+                  <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-muted-foreground">
+                      →
                   </div>
                 )}
               </div>
