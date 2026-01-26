@@ -3,79 +3,93 @@
 @tailwind utilities;
 
 :root {
+  /* Futuristic Light Mode: Clean, clinical, high-tech lab feel */
   --font-satoshi: "Satoshi", var(--font-geist-sans), sans-serif;
 
-  --background: 220 60% 98%;
-  --foreground: 230 40% 12%;
+  --background: 210 40% 98%; /* Very slight cool tint, not pure white */
+  --foreground: 222 47% 11%;
 
-  --card: 220 60% 99%;
-  --card-foreground: 230 40% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
 
-  --popover: 220 60% 99%;
-  --popover-foreground: 230 40% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
 
-  --primary: 260 85% 55%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary is now a vivid Electric Violet */
+  --primary: 262 83% 58%;
+  --primary-foreground: 210 40% 98%;
 
-  --secondary: 200 90% 92%;
-  --secondary-foreground: 230 40% 18%;
+  /* Secondary is a cool Holo-Blue */
+  --secondary: 199 89% 85%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 210 50% 94%;
-  --muted-foreground: 230 20% 45%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 190 95% 88%;
-  --accent-foreground: 230 40% 15%;
+  /* Accent is a sharp Cyan */
+  --accent: 186 100% 50%;
+  --accent-foreground: 222 47% 11%;
 
-  --destructive: 350 85% 55%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
 
-  --border: 220 30% 88%;
-  --input: 220 30% 88%;
-  --ring: 260 85% 55%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 262 83% 58%;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem; /* Slightly larger radius for a modern feel */
 
-  --chart-1: 260 85% 55%;
-  --chart-2: 190 95% 45%;
-  --chart-3: 220 90% 60%;
-  --chart-4: 300 80% 65%;
-  --chart-5: 340 85% 60%;
+  --chart-1: 262 83% 58%;
+  --chart-2: 186 100% 50%;
+  --chart-3: 290 100% 60%;
+  --chart-4: 43 96% 64%;
+  --chart-5: 20 90% 60%;
 }
 
 .dark {
-  --background: 230 35% 6%;
-  --foreground: 210 40% 96%;
+  /* Futuristic Dark Mode: Deep Space / Cyberpunk Interface */
+  
+  /* Background is a deep, rich void blue-black, not flat gray */
+  --background: 224 71% 4%; 
+  --foreground: 210 40% 98%;
 
-  --card: 230 35% 8%;
-  --card-foreground: 210 40% 96%;
+  /* Cards have a slight transparency feel (if you use bg-card/opacity) */
+  --card: 224 71% 6%;
+  --card-foreground: 210 40% 98%;
 
-  --popover: 230 35% 8%;
-  --popover-foreground: 210 40% 96%;
+  --popover: 224 71% 6%;
+  --popover-foreground: 210 40% 98%;
 
-  --primary: 260 90% 65%;
-  --primary-foreground: 230 35% 8%;
+  /* Primary: Neon Purple/Indigo */
+  --primary: 263 70% 65%;
+  --primary-foreground: 210 40% 98%;
 
-  --secondary: 210 30% 14%;
-  --secondary-foreground: 210 40% 96%;
+  /* Secondary: Deep technical blue */
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
 
-  --muted: 210 30% 14%;
-  --muted-foreground: 220 15% 65%;
+  --muted: 217 33% 12%;
+  --muted-foreground: 215 20% 65%;
 
-  --accent: 190 90% 40%;
-  --accent-foreground: 210 40% 96%;
+  /* Accent: Neon Cyan/Turquoise glow */
+  --accent: 186 80% 60%;
+  --accent-foreground: 224 71% 4%;
 
-  --destructive: 350 80% 45%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
 
-  --border: 230 25% 18%;
-  --input: 230 25% 18%;
-  --ring: 260 90% 65%;
+  /* Borders are subtle glowing lines */
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  
+  /* Focus rings are bright electric blue */
+  --ring: 186 80% 60%;
 
-  --chart-1: 260 90% 65%;
-  --chart-2: 180 90% 45%;
-  --chart-3: 220 90% 60%;
-  --chart-4: 300 85% 65%;
-  --chart-5: 340 90% 60%;
+  --chart-1: 263 70% 65%; /* Neon Purple */
+  --chart-2: 186 80% 60%; /* Neon Cyan */
+  --chart-3: 320 80% 60%; /* Neon Pink */
+  --chart-4: 45 90% 60%;  /* Neon Yellow */
+  --chart-5: 15 85% 65%;  /* Neon Orange */
 }
 
 * {
@@ -84,6 +98,22 @@
 
 html,
 body {
+  /* Smooth color transition for theme switching */
   @apply transition-colors duration-500 bg-background text-foreground;
-  @apply bg-background text-foreground;
+  
+  /* Optional: Add a subtle futuristic selection color */
+  ::selection {
+    @apply bg-primary/30 text-primary-foreground;
+  }
+}
+
+/* Optional Utility: Add a "Glassmorphism" effect class */
+@layer utilities {
+  .glass-panel {
+    @apply bg-background/60 backdrop-blur-md border border-white/10 dark:border-white/5;
+  }
+  
+  .neon-shadow {
+    box-shadow: 0 0 10px theme('colors.primary.DEFAULT'), 0 0 20px theme('colors.primary.DEFAULT / 30%');
+  }
 }
