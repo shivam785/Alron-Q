@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Monitor, Smartphone, ArrowRight } from "lucide-react";
 import { Particles } from "@/components/ui/particles";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -48,19 +49,18 @@ const HeroSection = () => {
 
         {/* ================= PRODUCT PREVIEW (FIXED) ================= */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-card rounded-2xl border border-border shadow-xl p-8 ">
+          <div className="bg-card rounded-2xl border border-border shadow-xl ">
 
             {/* Preview box */}
             <div className="relative aspect-video rounded-xl overflow-hidden">
 
-              {/* 🔥 PARTICLES — NOW ACTUALLY VISIBLE */}
-              <Particles
-                color="#9fd3ff"
-                particleCount={ 20000}
-                particleSize={5}
-                animate
-                className="absolute inset-0 z-0 pointer-events-none "
-              />
+             <video
+                                         src="/assets/model.mp4"
+                                         className={cn("w-full h-full object-cover")}
+                                         loop
+                                         muted
+                                         autoPlay
+                                       />
 
               {/* Foreground content (semi-transparent) */}
               <div className="relative z-10 h-full w-full flex items-center justify-center ">
