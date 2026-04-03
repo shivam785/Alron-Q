@@ -5,6 +5,7 @@ import { Laptop, Moon, Sun } from "lucide-react";
 import { ThemeSwitch } from "@/components/ui/theme-switch";
 import { cn } from "@/lib/utils";
 
+
 interface NavLink {
   label: string;
   href: string;
@@ -57,9 +58,9 @@ const FlexNavbar: React.FC<FlexNavbarProps> = ({
     { label: "Contact", href: "#cta" },
   ],
   media = {
-    type: "image",
-    src: "/assets/alronq.png",
-    alt: "Our story",
+    type: "video",
+    src: "/assets/model.mp4",
+    alt: "3D model",
   },
   mediaButtonText = "Our story",
   onMediaClick,
