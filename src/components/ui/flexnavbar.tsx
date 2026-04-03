@@ -59,7 +59,7 @@ const FlexNavbar: React.FC<FlexNavbarProps> = ({
   ],
   media = {
     type: "image",
-    src: "/assets/photo.jpeg",
+    src: "/assets/photo.png",
     alt: "3D model",
   },
   mediaButtonText = "3D model",
